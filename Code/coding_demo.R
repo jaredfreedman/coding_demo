@@ -42,4 +42,3 @@ plot(x, y,
 
 abline(fit)
 
-
