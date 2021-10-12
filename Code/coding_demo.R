@@ -20,7 +20,27 @@ m <- 2.2 #slope
 b <- 1.1 #intercept
 
 x <- rnorm(n = n, mean = 0, sd = 1) #indedpendent variable
-noise <- rnorm(n = n, mean = 0, sd = 1)
+noise <- rnorm(n = n, mean = 0, sd = 1) 
 y <- m * x + b + noise
 
-plot(x,y)
+#plot(x,y)  #debug plot
+
+
+# Do linear regression ----------------------------------------------------
+
+fit <- glm(y~x)
+
+
+# Plot the results --------------------------------------------------------
+
+par(mar=c(6,7,4,1))
+
+plot(x, y,
+     xlab = "normalized velocity",
+     ylab = "normalized\nenergy consumption"
+     )
+
+abline(fit)
+
+
+
