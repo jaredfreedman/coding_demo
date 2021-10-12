@@ -4,6 +4,9 @@
 #collaborators or future self
 
 
+# Before starting code, set working directory to the following
+#  setwd("~/Research/git/coding_demo/Code/")
+
 
 # Clear workspace and close all graphics ----------------------------------
 # Start script from a clean workspace to prevent errors
@@ -30,6 +33,15 @@ y <- m * x + b + noise
 
 fit <- glm(y~x)
 
+
+# Save data ---------------------------------------------------------------
+
+save.image(file = "../Data/my_fancy_calculations.Rdata")
+
+
+# Load data ---------------------------------------------------------------
+
+load(file = "../Data/my_fancy_calculations.Rdata")
 
 # Plot the results --------------------------------------------------------
 
